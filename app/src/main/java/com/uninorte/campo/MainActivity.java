@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView campoLabel = (TextView) campo.findViewById(R.id.campo_label);
                 Button btn = (Button) campo.findViewById(R.id.button);
 
-                campoLabel.setText("Campo "+ MainActivity.counter);
+                campoLabel.setText("Campo " + MainActivity.counter);
                 btn.setTag(MainActivity.counter + "");
                 btn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("tag", "Campo " + view.getTag() + " clicked");
                         Toast.makeText(MainActivity.this, "Campo" + view.getTag() +" clicked",
                                 Toast.LENGTH_SHORT).show();
-
                    }
                 });
 
