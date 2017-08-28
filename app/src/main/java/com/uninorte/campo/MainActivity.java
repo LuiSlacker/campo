@@ -19,7 +19,7 @@ import static com.uninorte.campo.R.id.fab;
 
 public class MainActivity extends AppCompatActivity {
 
-    static int counter = 0;
+    private int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.counter++;
+                counter++;
                 View campo = getLayoutInflater().inflate(R.layout.campo, null);
                 TextView campoLabel = (TextView) campo.findViewById(R.id.campo_label);
                 Button btn = (Button) campo.findViewById(R.id.button);
 
-                campoLabel.setText("Campo " + MainActivity.counter);
-                btn.setTag(MainActivity.counter + "");
+                campoLabel.setText("Campo " + counter);
+                btn.setTag(counter + "");
                 btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
